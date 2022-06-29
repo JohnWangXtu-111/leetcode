@@ -33,7 +33,7 @@ var threeSum = (nums) => {
       while (third > second && nums[third] + nums[second] + nums[first] > 0) {
         third--;
       }
-      if (third === second) break; //third和second相等了，但是三者之和依然大于
+      if (third === second) break; //third和second相等了，但是三者之和依然大于0，这种情况必然是无解的，可以直接跳出循环
       if (nums[third] + nums[second] + nums[first] === 0) {
         ans.push([nums[third], nums[second], nums[first]]);
       }
